@@ -1,17 +1,16 @@
 export ZOPEN_GIT_URL="https://github.com/ggreer/the_silver_searcher.git"
-export ZOPEN_GIT_DEPS="pkgconfig libpcre xz git make gzip tar ncurses zoslib automake autoconf m4 perl gnulib"
+export ZOPEN_GIT_DEPS="pkgconfig xz git make gzip tar ncurses zoslib automake autoconf m4 perl gnulib pcre"
 export ZOPEN_TARBALL_URL="https://geoff.greer.fm/ag/releases/the_silver_searcher-2.2.0.tar.gz"
-export ZOPEN_TARBALL_DEPS="pkgconfig libpcre xz git make gzip tar ncurses zoslib automake autoconf m4 perl gnulib"
+export ZOPEN_TARBALL_DEPS="pkgconfig xz git make gzip tar ncurses zoslib automake autoconf m4 perl gnulib pcre"
 export ZOPEN_TYPE="TARBALL"
 
 export ZOPEN_EXTRA_LIBS='-l gnu'
 export ZOPEN_EXTRA_LDFLAGS="-L ${ZOPEN_ROOT}/the_silver_searcher-2.2.0/zos/lib/lib"
 export ZOPEN_EXTRA_CFLAGS="-I ${ZOPEN_ROOT}/the_silver_searcher-2.2.0/zos/lib/lib"
-export ZOPEN_EXTRA_CPPFLAGS="-I \${PCRE2_HOME}/include"
-export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-libpcre2=\${PCRE2_HOME}"
+export ZOPEN_EXTRA_CPPFLAGS="-I \${PCRE_HOME}/include"
 
-export PCRE_CFLAGS="-I\{$PCRE_HOME2}/include"
-export PCRE_LIBS="-lpcre2-8"
+export PCRE_CFLAGS="-I\{$PCRE_HOME}/include"
+export PCRE_LIBS="-lpcre"
 export LZMA_CFLAGS="-I\{$XZ_HOME}/include"
 export LZMA_LIBS="-llzma"
 
