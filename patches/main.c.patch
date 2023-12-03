@@ -1,0 +1,13 @@
+diff --git a/src/main.c b/src/main.c
+index 6de2038..5410932 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -77,6 +77,8 @@ int main(int argc, char **argv) {
+         GetSystemInfo(&si);
+         num_cores = si.dwNumberOfProcessors;
+     }
++#elif __MVS__
++    num_cores = __get_num_online_cpus();
+ #else
+     num_cores = (int)sysconf(_SC_NPROCESSORS_ONLN);
+ #endif

@@ -1,0 +1,14 @@
+diff --git a/src/print.c b/src/print.c
+index 34dbeff..1c2498b 100644
+--- a/src/print.c
++++ b/src/print.c
+@@ -20,6 +20,9 @@ const char *color_reset = "\033[0m\033[K";
+ 
+ const char *truncate_marker = " [...]";
+ 
++#ifdef __MVS__
++#define __thread
++#endif
+ __thread struct print_context {
+     size_t line;
+     char **context_prev_lines;
