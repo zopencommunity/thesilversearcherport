@@ -1,13 +1,14 @@
 diff --git a/src/main.c b/src/main.c
-index 6de2038..5410932 100644
+index 6de2038..202cf3c 100644
 --- a/src/main.c
 +++ b/src/main.c
-@@ -77,6 +77,8 @@ int main(int argc, char **argv) {
+@@ -77,6 +77,9 @@ int main(int argc, char **argv) {
          GetSystemInfo(&si);
          num_cores = si.dwNumberOfProcessors;
      }
 +#elif __MVS__
-+    num_cores = __get_num_online_cpus();
++    //TODO: Cap to 2 on z/OS - anything more than 4 causes OC4s
++    num_cores = __get_num_online_cpus() < 2 ? __get_num_online_cpus() : 2;
  #else
      num_cores = (int)sysconf(_SC_NPROCESSORS_ONLN);
  #endif
