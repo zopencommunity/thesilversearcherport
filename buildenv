@@ -2,6 +2,7 @@ export ZOPEN_DEV_URL="https://github.com/ggreer/the_silver_searcher.git"
 export ZOPEN_DEV_DEPS="coreutils pkgconfig libpcre xz git make gzip tar ncurses zoslib automake autoconf m4 perl getopt zlib"
 export ZOPEN_STABLE_URL="https://geoff.greer.fm/ag/releases/the_silver_searcher-2.2.0.tar.gz"
 export ZOPEN_STABLE_DEPS="coreutils pkgconfig libpcre xz git make gzip tar ncurses zoslib automake autoconf m4 perl getopt zlib"
+export ZOPEN_CATEGORIES="utilities"
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_COMP=CLANG
 export ZOPEN_CHECK=skip # needs cram ported
