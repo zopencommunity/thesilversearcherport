@@ -2,7 +2,7 @@
 
 # Thesilversearcher
 
-A code searching tool
+A code-searching tool similar to ack and grep, but faster.
 
 # Installation and Usage
 
